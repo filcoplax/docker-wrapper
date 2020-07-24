@@ -1,20 +1,21 @@
 package cmd
 
 import (
-	"github.com/spf13/cobra"
 	"log"
 	"os"
 	"os/exec"
 	"strings"
+
+	"github.com/spf13/cobra"
 )
 
 var k8sRegistry string = "k8s.gcr.io"
-var gcrRegistry string = "gcr.io"
+var gcrRegistry string = "gcr.io/google-containers"
 var quayRegistry string = "quay.io"
 
-var k8sMirror string = "gcr.azk8s.cn/google_containers"
-var gcrMirror string = "gcr.azk8s.cn"
-var quayMirror string = "quay.azk8s.cn"
+var k8sMirror string = "registry.aliyuncs.com/google_containers"
+var gcrMirror string = "registry.aliyuncs.com/google_containers"
+var quayMirror string = "quay.mirrors.ustc.edu.cn"
 
 var pullCmd = &cobra.Command{
 	Use:   "pull",
